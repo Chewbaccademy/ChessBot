@@ -1,4 +1,5 @@
 from src.Engine.Board.Square import Square, SquareCollection
+from src.utils import get_letter_by_alphabet_rank
 
 class Board:
     """
@@ -15,6 +16,8 @@ class Board:
         for i in range(self.rank_number):
             for j in range(self.file_number):
                 self.square_list.append(Square(i, j))
+                
+        self.file_list = [get_letter_by_alphabet_rank(i) for i in range(self.file_number)]
                 
                 
         print("Board Initialization [OK]")

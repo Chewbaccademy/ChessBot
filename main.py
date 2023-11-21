@@ -1,10 +1,16 @@
-from src.Engine.Board.Board import Board
+from src.Engine.Engine import Engine
 
 
 
 if __name__ == '__main__':
     print("Starting ...")
-    board = Board()
-    print(board)
-    print(board.get_row_by_id(0))
-    print(board.get_row_by_id(5))
+    players = [
+        {
+            "name": "Kilian"
+        },
+        {
+            "name": "Autre"
+        }
+    ]
+    engine =Engine(players_config=players)
+    engine.game()
